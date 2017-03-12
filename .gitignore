@@ -5,3 +5,6 @@ db.json
 node_modules/
 public/
 .deploy*/
+themes/yilia/node_modules/
+themes/yilia/.gitignore
+themes/yilia/source/
