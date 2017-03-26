@@ -13,7 +13,7 @@ var obj1 = {}
 //调用构造函数
 var obj2 = new Object()
 ```
-
+<!--more-->
 其实上述两种创建对象的方法，本质上是一样的，都是JS引擎调用对象的构造函数来新建出一个对象。构造函数本身也是一个普通的JS函数
 
 下面我们来看一个例子
@@ -22,7 +22,6 @@ var obj2 = new Object()
 function Person(name){
     this.name = name
 }
-
 //每个构造函数JS引擎都会自动添加一个prototype属性，我们称之为原型，这是一个对象
 //每个由构造函数创建的对象都会共享prototype上面的属性与方法
 console.log(typeof Person.prototype) // 'object'
@@ -67,12 +66,16 @@ person1.sayName === person2.sayName //true
 
 为了方便我们记住上图，还有几个需要我们知道的特殊概念：
 
-- `Function`的原型属性与`Function`的原型指向同一个对象. 即
+1. `Function`的原型属性与`Function`的原型指向同一个对象. 即是
     ```javascript 
         Function.__proto__ == Function.prototype
     ```
-- `Object.prototype.__proto__ === null`
-- `typeof Function.prototype === 'function'`
+2. `Object.prototype.__proto__ === null`
+3. `typeof Function.prototype === 'function'`
 
 
   [1]: http://stackoverflow.com/questions/650764/how-does-proto-differ-from-constructor-prototype
+
+
+### 参考
+[在JavaScript中，Function构造函数本身也算是Function类型的实例吗？][https://www.zhihu.com/question/31333084/answer/152086175]

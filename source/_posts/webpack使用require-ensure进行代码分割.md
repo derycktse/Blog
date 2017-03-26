@@ -18,6 +18,7 @@ tags: [构建]
 └── webpack.config.js
 ```
 
+<!--more-->
 
 文件内容
 entry.js
